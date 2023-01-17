@@ -1,0 +1,13 @@
+
+<% types_options = "" %>
+<% @types.each do |type| %>
+    <% types_options += "<option value='#{type}'>#{type.capitalize}</option>" %>
+<% end %>
+
+<form action='/play' method='post'>
+    <label>Choose a type:</label>
+    <select name='player'>
+        <%=types_options%>
+    </select>
+    <input type='submit' value='Play'>
+</form>
